@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {
+                text-align:center;
+                color:darkblue;
+            }
+
+            form {
+                background-color: darkblue;
+                padding: 20px;
+                margin: 0 auto;
+                width: 540px;
+                font: 16px sans-serif;
+                border-radius: 10px;
+            }
+
+            label {
+                color:white;
+            }
+
+            textarea {
+                margin: 10px 0;
+                width: 340px;
+                height: 120px;
+            }
+
+            .error {
+                color: red;
+            }
+        </style>    
+    </head>
+    
+    <body>
+        <h1>Signup</h1>
+        <form action="/" method="POST">
+            <label for="username">User Name (3-20 char)</label>
+            <input id="username" type="text" name="username" /><br/><br/>
+
+        <span class="error">{{username_error}}</span>
+
+        <form action="/" method="POST">
+            <label for="password">Password </label>
+            <input id="password" type="password" name="password" /><br/><br/>
+        
+            <label for="password_verify">Verify Password </label>
+            <input id="password_verify" type="password" name="password_verify" /><br/><br/>
+
+        <span class="error">{{password_error}}</span>
+
+            <label for="email">Email (optional) </label>
+            <input id="email" type="text" name="email" /><br/><br/>
+
+        <span class="error">{{email_error}}</span>
+
+            <input type="submit" value="Submit Query" />
+        </form>   
+    </body>
+</html>
